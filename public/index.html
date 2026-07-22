@@ -1,0 +1,58 @@
+<!doctype html>
+<head>
+    <html lang='en'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <meta charset='UTF-8'>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <!-- might need to add a / (/basket.svg) when adding all this to npm or something-->
+    <link rel="icon" href="basket.svg" type="image/svg">
+    <title>Groceries</title>
+</head>
+
+<body>
+    <div class='outside'>
+        <div class='container ctop' id='ctop'>
+            <div class='hamburgerbar'>
+                <button id='hamburger' class='viewbtn hamburgerbtn'>☰</button>
+                <button id='notebtn' class='viewbtn'>Notes</button>
+                <button id='mealbtn' class='viewbtn'>Meals</button>
+                <button id='allbtn' class='viewbtn'>All</button>
+            </div>
+            <div id='viewbar' class='viewbar collapsed'>
+				<button id='homeimp' class='viewbtn'>Home</button>
+				<button id='aldi' class='viewbtn'>Aldi</button>
+				<button id='general' class='viewbtn'>Groc.</button>
+				<button id='costco' class='viewbtn'>Costco</button>
+			</div>
+			<div class='sortbar'>
+                <button id='idasc' class='sortbtn'>Ascend Date</button>
+				<button id='iddes' class='sortbtn'>Descend Date</button>
+				<button id='alasc' class='sortbtn'>Ascend Alphabet</button>
+				<button id='aldes' class='sortbtn'>Descend Alphabet</button>
+			</div>
+			<div id='formbar' class='formbar'>
+                <input type='text' id='item' class='inpttext inpt' placeholder='Item'>
+                <input type='number' id='qtyneed' class='inpttext inpt' placeholder='Quantity' min='1'>
+                <select id='unit' class='inpttext inpt'>
+                    <option value='' disabled selected hidden style='color:gray;'>Units</option>
+                    <option value='oz'>oz</option>
+					<option value='lb'>lb</option>
+					<option value='pack'>pack</option>
+					<option value='case'>case</option>
+                </select>
+                <select id='shop' class='inpttext inpt'>
+                    <option id='shoption' value='' disabled selected hidden style='color:gray;'>Store</option>
+                    <option value='Costco'>Costco</option>
+					<option value='Groceries'>Groceries</option>
+					<option value='Home Imp.'>Home Improvement</option>
+					<option value='Aldi'>Aldi</option>
+                </select>
+                <select id='category' class='inpttext inpt collapsed'>
+                    <option value='' disabled selected hidden style='color:gray;'>Category</option>
+                    <option value='Meal Prep'>Meal Prep</option>
+                </select>
+                <button id='add' class='addbtn inpt'>Add</button>
+			</div>
+        </div>
+    </div>
+</body>

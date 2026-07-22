@@ -1,0 +1,137 @@
+:root{
+    --mainbg:rbga(173,216,230,.7);
+    --viewbarbg:rgba(141,162,241,1);
+    --mainbtnbg:#EFEFEF;
+    --mainbtnbordercolor:#8B97AA;
+    --mainbtntextcolor-light:#6C7B93;
+    --lighttext:#435674;
+    --subbtnbordercolor:#8FA1BE;
+    --inptbg:#EFEFEF;
+}
+
+body{
+    min-height:100svh;
+    width:100%;
+    background:linear-gradient(135deg,#cf9aff,#95c0ff);
+    display:flex;
+    justify-content:center;
+    margin:0;
+}
+.outside{
+    margin:8px;
+    position:fixed;
+    top:0;
+    width:24.7rem;
+    display:flex;
+    justify-content:center;
+}
+.container{
+    height:fit-content;
+    width:100%;
+    background:var(--mainbg);
+    padding:8px;
+}
+.ctop{
+    border-radius:1.2rem 1.2rem 0 0;
+    padding-bottom:0;
+    position:sticky;
+    top:8px;
+    z-index:1;
+}
+.cbot{
+    border-radius:0 0 1.2rem 1.2rem;
+    padding-top:0;
+    padding-bottom:4px;
+    max-height:78svh;
+    overflow-y:auto;
+}
+.hamburgerbar{
+    display:flex;
+    justify-content:center;
+    padding:.5rem .5rem 0;
+    gap:1rem;
+}
+.viewbtn{
+    padding:1rem;
+    padding-bottom:.9rem;
+    border-radius:1rem;
+    color:var(--mainbtntextcolor-light);
+    background:var(--mainbtnbg);
+    border:4px solid var(--mainbtnbordercolor);
+    font-size:1.3rem;
+    cursor:pointer;
+    font-weight:bold;
+    flex-shrink:1;
+    min-width:0;
+}
+.hamburgerbtn{
+    font-size:2rem;
+    padding:.4rem .9rem;
+    cursor:pointer;
+    color:var(--mainbtnbordercolor);
+}
+.viewbar{
+    height:fit-content;
+    width:fit-content;
+    max-width:100%;
+    box-sizing:border-box;
+    background:var(--viewbarbg);
+    padding:1rem;
+    border-radius:1rem;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+/*     justify-content:center; */
+    gap:1rem;
+/*     position:sticky; */
+    position:absolute;
+    margin-top:.2rem;
+}
+.collapsed{
+    display:none;
+}
+.sortbar{
+    display:flex;
+    justify-content:space-between;
+    margin-top:4px;
+    margin-bottom:4px;
+}
+.sortbar > :first-child{
+    margin-left:8px;
+}
+.sortbar > :last-child{
+    margin-right:8px;
+}
+.sortbtn{
+    width:min-content;
+    border-radius:.8rem;
+    border:3px solid var(--subbtnbordercolor);
+    color:var(--lighttext:#435674);
+    curor:pointer;
+}
+.formbar{
+    height:auto;
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+}
+.inpttext{
+    margin-right:16px;
+    min-width:8ch;
+    border-radius:.4rem;
+    background:var(--inptbg);
+    cursor:pointer;
+}
+.addbtn{
+    width:8ch;
+    border-radius:.5rem;
+    color:var(--lighttext);
+    border:3px solid var(--subbtnbordercolor);
+    padding:.2rem;
+    cursor:pointer;
+}
+/*.noteinpt{
+    flex:1 0 auto;
+}*/
